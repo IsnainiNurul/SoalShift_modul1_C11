@@ -61,6 +61,11 @@ Anda diminta tolong oleh teman anda untuk mengembalikan filenya yang telah dienk
 
 
 ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/nosatu.png)
+
+
+hasil :
+![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/hasilnosatu.png)
+
 ## soal 2
 Anda merupakan pegawai magang pada sebuah perusahaan retail, dan anda diminta untuk memberikan laporan berdasarkan file WA_Sales_Products_2012-14.csv.
 Laporan yang diminta berupa:
