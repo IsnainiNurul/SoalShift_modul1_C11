@@ -301,6 +301,11 @@ Buatlah sebuah script bash untuk menyimpan record dalam syslog yang memenuhi kri
          
          
   ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/nolima.png)
+  
+  
+  ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/hasilnolima.png)
+  
+  
 
 
        
