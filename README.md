@@ -58,6 +58,9 @@ Anda diminta tolong oleh teman anda untuk mengembalikan filenya yang telah dienk
           ```14 14 14 2 *```` 
           ```14 14 14 2 5```
 
+
+
+![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/nosatu.png)
 ## soal 2
 Anda merupakan pegawai magang pada sebuah perusahaan retail, dan anda diminta untuk memberikan laporan berdasarkan file WA_Sales_Products_2012-14.csv.
 Laporan yang diminta berupa:
@@ -158,6 +161,11 @@ b. Tentukan tiga product line yang memberikan penjualan(quantity) terbanyak pada
 c. Tentukan tiga product yang memberikan penjualan(quantity) terbanyak berdasarkan tiga product line yang didapatkan pada soal poin. 
   awk -F ',' '{if($7=='2012' && $1=="United States" && ($4=="Outdoor Protection" || $4=="Camping Equipment" || $4=="Personal Accessories") ) p[$6]+=$10} END {for(hasil in p) {print p[hasil]" "hasil}}' WA_S$ WA_Sales_Products_2012-14.csv | sort -nr | head -3 
        --> program yang berfungsi dengan nomor 2b dan dengan suatu kondisi bahwa program akan mengecek apakah data sesuai dengan product line “Outdoor Protection”, "Camping Equipment" dan "Personal Accessories" 
+       
+       
+
+
+![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/hasilnodua.png)
 
 ## soal 3
 Buatlah sebuah script bash yang dapat menghasilkan password secara acak sebanyak 12 karakter yang terdapat huruf besar, huruf kecil, dan angka. Password acak tersebut disimpan pada file berekstensi .txt dengan ketentuan pemberian nama sebagai berikut:
@@ -196,6 +204,8 @@ Penjelasan :
        ``done`` 
          artinya mengakhiri perintah do
 
+ ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/notiga.png)
+
 ## soal 4
 Lakukan backup file syslog setiap jam dengan format nama file “jam:menit tanggal-bulan-tahun”. Isi dari file backup terenkripsi dengan konversi huruf (string manipulation) yang disesuaikan dengan jam dilakukannya backup misalkan sebagai berikut:
        a. Huruf b adalah alfabet kedua, sedangkan saat ini waktu menunjukkan pukul 12, sehingga huruf b diganti dengan huruf alfabet yang memiliki urutan ke 12+2 = 14.
@@ -208,16 +218,17 @@ d. Backup file syslog setiap jam.
 
 e. dan buatkan juga bash script untuk dekripsinya.
        
+
     Penjelasan :
     
     --4-- Berikut ini ` adalah syntax enkrip--
     #!/bin/bash
 
-``A=ABCDEFGHIJKLMNOPQRSTUVWXYZ
-  B=abcdefghijklmnopqrstuvwxyz
-  A2=($(echo ${A[@]})$(echo ${A[@]}))
+``A=ABCDEFGHIJKLMNOPQRSTUVWXYZ (untuk Huruf Kapital)
+  B=abcdefghijklmnopqrstuvwxyz (untuk Huruf Kecil)
+  A2=($(echo ${A[@]})$(echo ${A[@]})) 
   B2=($(echo ${B[@]})$(echo ${B[@]}))
-  hour=`date +"%H"`
+  hour=`date +"%H"`(menjalankan tiap jam)
   rot=$hour
   simpan=($(echo ${A[@]})$(echo ${B[@]}))
   newA=$(echo $A | tr "${A:0:26}" "${A2:${rot}:26}")
@@ -225,6 +236,11 @@ e. dan buatkan juga bash script untuk dekripsinya.
   simpan2=($(echo ${newA[@]})$(echo ${newB[@]}))
   hasil=`date +"%H:%M %d-%m-%Y"`
   < /var/log/syslog > "$hasil" tr "$simpan" "$simpan2"``
+  
+   ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/noempat.png)
+   
+   hasil enkrip :
+   ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/enkrip.png)
   
   
   ``--4b--Berikut ini adalah syntax Dekript--
@@ -240,10 +256,14 @@ e. dan buatkan juga bash script untuk dekripsinya.
   newA=$(echo $A | tr "${A:0:26}" "${A2:${rot}:26}")
   newB=$(echo $B | tr "${B:0:26}" "${B2:${rot}:26}")
   simpan2=($(echo ${newA[@]})$(echo ${newB[@]}))
-  < "$bisa" > "$bisa dec" tr "$simpan2" "$simpan"
+  < "$bisa" > "$bisa dec" tr "$simpan2" "$simpan"``
+  
+  hasil untuk dekrip :
+   ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/dekrip.png)
   
   
-   
+  
+ 
 ## soal 5   
 Buatlah sebuah script bash untuk menyimpan record dalam syslog yang memenuhi kriteria berikut:
 
@@ -262,22 +282,25 @@ Buatlah sebuah script bash untuk menyimpan record dalam syslog yang memenuhi kri
    •	Crontabnya
    
    
-      a)	Untuk menghilangkan sudo dan memunculkan string cron
+  a)	Untuk menghilangkan sudo dan memunculkan string cron
           ``$0 !/sudo/``
          `` $0 /cron/ || /CRON/``
      
      
-     b)	Memasukkan record kedalam file direkstori
+   b)	Memasukkan record kedalam file direkstori
          `` /home/galihpribadi04/modul1/syslogno5.log``
       
       
-      c)	Membuat baris field < 13 awk ‘NF < 13’
+  c)	Membuat baris field < 13 awk ‘NF < 13’
       
       
-      d)	Pengaturan crontab setiap 6 menit pada meit 2 sampai 30
+   d)	Pengaturan crontab setiap 6 menit pada meit 2 sampai 30
          `` 2-30 * * * * /bin/bash/ /home/galihpribadi04/soal5.sh``
           Untuk code lengkapnya bisa dilihat sebagai berikut :
-         ``awk ‘/cron/ || /CRON/, !/sudo/’ /var/log/syslog | awk ‘NF < 13’ >> /home/galihpribadi04/modul1/syslogno5.log
+         ``awk ‘/cron/ || /CRON/, !/sudo/’ /var/log/syslog | awk ‘NF < 13’ >> /home/galihpribadi04/modul1/syslogno5.log ``
+         
+         
+  ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/nolima.png)
 
 
        
