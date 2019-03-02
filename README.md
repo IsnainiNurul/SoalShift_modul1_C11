@@ -58,7 +58,8 @@ Anda diminta tolong oleh teman anda untuk mengembalikan filenya yang telah dienk
           ```14 14 14 2 *```` 
           ```14 14 14 2 5```
 
-
+crontab :
+![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/crontab.png)
 
 ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/nosatu.png)
 
@@ -265,6 +266,10 @@ e. dan buatkan juga bash script untuk dekripsinya.
   
   hasil untuk dekrip :
    ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/dekrip.png)
+   
+   
+  crontab :
+  ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/crontab.png)
   
   
   
@@ -309,6 +314,10 @@ Buatlah sebuah script bash untuk menyimpan record dalam syslog yang memenuhi kri
   
   
   ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/hasilnolima.png)
+  
+   
+  crontab :
+  ![alt text](https://github.com/IsnainiNurul/SoalShift_modul1_C11/blob/master/crontab.png)
   
   
 
